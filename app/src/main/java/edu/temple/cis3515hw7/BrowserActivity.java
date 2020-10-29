@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.res.Configuration;
 import android.os.Bundle;
 
-public class BrowserActivity extends AppCompatActivity implements PageControlFragment.webControlInterface  {
+public class BrowserActivity extends AppCompatActivity implements PageControlFragment.webControlInterface, PageViewerFragment.webViewInterface {
     PageControlFragment pageControl;
     PageViewerFragment pageViewer;
     @Override
@@ -31,8 +31,14 @@ public class BrowserActivity extends AppCompatActivity implements PageControlFra
     }
 
     public void backClick() {
+        pageViewer.back();
     }
     public void forwardClick() {
+        pageViewer.forward();
+    }
+
+    public void linkClick(String url){
+        pageControl.linkClicked(url);
     }
 
 }
