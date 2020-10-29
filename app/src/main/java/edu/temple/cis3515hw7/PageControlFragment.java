@@ -28,6 +28,7 @@ public class PageControlFragment extends Fragment {
     private String mParam1;
     private String mParam2;
     private View v;
+
     private webControlInterface parentActivity;
 
     public PageControlFragment() {
@@ -92,7 +93,7 @@ public class PageControlFragment extends Fragment {
         v.findViewById(R.id.search_button).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                TextView text = view.findViewById(R.id.url_input);
+                TextView text = v.findViewById(R.id.url_input);
 
                 parentActivity.searchClick( text.getText().toString());
             }

@@ -12,17 +12,17 @@
         android:orientation="vertical">
 
         <fragment
-            android:id="@+id/page_viewer"
-            android:name="edu.temple.cis3515hw7.PageViewerFragment"
-            android:layout_width="match_parent"
-            android:layout_height="75dp"
-            android:layout_marginTop="12dp" />
-
-        <fragment
             android:id="@+id/page_control"
             android:name="edu.temple.cis3515hw7.PageControlFragment"
             android:layout_width="match_parent"
-            android:layout_height="644dp" />
+            android:layout_height="89dp" />
+
+        <fragment
+            android:id="@+id/page_viewer"
+            android:name="edu.temple.cis3515hw7.PageViewerFragment"
+            android:layout_width="match_parent"
+            android:layout_height="640dp"
+            android:layout_marginTop="12dp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

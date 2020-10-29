@@ -6,13 +6,14 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 
 public class BrowserActivity extends AppCompatActivity implements PageControlFragment.webControlInterface  {
-
+    PageControlFragment pageControl;
+    PageViewerFragment pageViewer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        PageControlFragment pageControl = PageControlFragment.newInstance("test","rwar");
-        PageViewerFragment pageViewer = PageViewerFragment.newInstance("dkfslj", "skdlfj");
+        pageControl = PageControlFragment.newInstance("test","rwar");
+        pageViewer = PageViewerFragment.newInstance("dkfslj", "skdlfj");
 
         getSupportFragmentManager()
                 .beginTransaction()
@@ -26,6 +27,7 @@ public class BrowserActivity extends AppCompatActivity implements PageControlFra
 
 
     public void searchClick(String html) {
+        pageViewer.search(html);
     }
 
     public void backClick() {
