@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.res.Configuration;
 import android.os.Bundle;
 
-public class BrowserActivity extends AppCompatActivity implements PageControlFragment.webControlInterface {
+public class BrowserActivity extends AppCompatActivity implements PageControlFragment.webControlInterface  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

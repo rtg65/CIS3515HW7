@@ -6,22 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".BrowserActivity">
 
-    <fragment
-        android:id="@+id/page_control"
-        android:name="edu.temple.cis3515hw7.PageControlFragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <fragment
-        android:id="@+id/page_viewer"
-        android:name="edu.temple.cis3515hw7.PageViewerFragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/page_control" />
+        <fragment
+            android:id="@+id/page_viewer"
+            android:name="edu.temple.cis3515hw7.PageViewerFragment"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginTop="12dp" />
+
+        <fragment
+            android:id="@+id/page_control"
+            android:name="edu.temple.cis3515hw7.PageControlFragment"
+            android:layout_width="match_parent"
+            android:layout_height="644dp" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

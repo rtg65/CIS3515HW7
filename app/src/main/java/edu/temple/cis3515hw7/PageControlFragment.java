@@ -92,7 +92,8 @@ public class PageControlFragment extends Fragment {
         v.findViewById(R.id.search_button).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                EditText text = view.findViewById(R.id.url_input);
+                TextView text = view.findViewById(R.id.url_input);
+
                 parentActivity.searchClick( text.getText().toString());
             }
         });
