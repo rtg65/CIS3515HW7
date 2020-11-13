@@ -6,23 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".BrowserActivity">
 
-    <LinearLayout
+    <fragment
+        android:id="@+id/browser_control"
+        android:name="edu.temple.cis3515hw7.BrowserControlFragment"
+        android:layout_width="409dp"
+        android:layout_height="84dp"
+        app:layout_constraintBottom_toTopOf="@+id/page_viewer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <fragment
+        android:id="@+id/page_control"
+        android:name="edu.temple.cis3515hw7.PageControlFragment"
+        android:layout_width="410dp"
+        android:layout_height="75dp"
+        app:layout_constraintBottom_toTopOf="@+id/browser_control"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/browser_control"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <fragment
+        android:id="@+id/page_viewer"
+        android:name="edu.temple.cis3515hw7.PageViewerFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <fragment
-            android:id="@+id/page_control"
-            android:name="edu.temple.cis3515hw7.PageControlFragment"
-            android:layout_width="match_parent"
-            android:layout_height="89dp" />
-
-        <fragment
-            android:id="@+id/page_viewer"
-            android:name="edu.temple.cis3515hw7.PageViewerFragment"
-            android:layout_width="match_parent"
-            android:layout_height="640dp"
-            android:layout_marginTop="12dp" />
-    </LinearLayout>
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/page_control" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

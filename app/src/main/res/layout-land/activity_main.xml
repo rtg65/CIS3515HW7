@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/page_control"
+        android:name="edu.temple.cis3515hw7.PageControlFragment"
+        android:layout_width="728dp"
+        android:layout_height="45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <fragment
+        android:id="@+id/browser_control"
+        android:name="edu.temple.cis3515hw7.BrowserControlFragment"
+        android:layout_width="172dp"
+        android:layout_height="33dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/page_control" />
+
+    <fragment
+        android:id="@+id/page_list"
+        android:name="edu.temple.cis3515hw7.PageListFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/page_viewer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/browser_control" />
+
+    <fragment
+        android:id="@+id/page_viewer"
+        android:name="edu.temple.cis3515hw7.PageViewerFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/browser_control"
+        app:layout_constraintTop_toBottomOf="@+id/page_control" />
+</androidx.constraintlayout.widget.ConstraintLayout>
