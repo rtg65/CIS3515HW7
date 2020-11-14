@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +24,10 @@ public class BrowserControlFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private View v;
+
+    private BrowserControlFragment.BrowserControlParent parentActivity;
 
     public BrowserControlFragment() {
         // Required empty public constructor
@@ -59,6 +64,17 @@ public class BrowserControlFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_browser_control, container, false);
+        v = inflater.inflate(R.layout.fragment_browser_control, container, false);
+        v.findViewById(R.id.imageButton).setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                parentActivity.newPage();
+            }
+        });
+        return v;
+    }
+
+    interface BrowserControlParent {
+        void newPage();
     }
 }
